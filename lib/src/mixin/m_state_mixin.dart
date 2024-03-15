@@ -7,7 +7,7 @@ import 'package:get/get_state_manager/src/simple/list_notifier.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../generated/locales.g.dart';
-import '../utils/equality.dart/m_equality.dart';
+import '../utils/equality/m_equality.dart';
 
 extension _Empty on Object {
   bool _isEmpty() {
