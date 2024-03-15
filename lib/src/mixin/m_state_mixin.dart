@@ -136,7 +136,7 @@ class MLoadingStatus<T> extends MGetStatus<T> {
   List get props => [];
 }
 
-mixin MStateMixin<T> on ListNotifier {
+mixin MStateMixin<T> on ListNotifierMixin {
   @protected
   Future<T> Function()? _body;
 
