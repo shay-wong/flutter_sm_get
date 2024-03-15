@@ -7,7 +7,6 @@ import 'package:get/get_state_manager/src/simple/list_notifier.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../generated/locales.g.dart';
-import '../utils/equality.dart/m_equality.dart';
 
 extension _Empty on Object {
   bool _isEmpty() {
@@ -41,7 +40,7 @@ extension MStateExt<T> on MStateMixin<T> {
     Widget? onEmpty,
     WidgetBuilder? onCustom,
   }) {
-    return SimpleBuilder(builder: (_) {
+    return Observer(builder: (_) {
       if (status.isLoading) {
         return onLoading ?? const Center(child: CircularProgressIndicator());
       } else if (status.isError) {
@@ -156,13 +155,13 @@ mixin MStateMixin<T> on ListNotifier {
 
   T get state => value;
   MGetStatus<T> get status {
-    notifyChildrens();
+    reportRead();
     return _status ??= _status = MGetStatus.loading();
   }
 
   @protected
   T get value {
-    notifyChildrens();
+    reportRead();
     return _value as T;
   }
 

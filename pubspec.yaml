@@ -10,12 +10,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get: 4.6.6
+  get: 5.0.0-release-candidate-5
   loading_animation_widget: ^1.2.1
   flutter_sm_models:
     git:
       url: https://github.com/shay-wong/flutter_sm_models.git
       ref: main
+
+dependency_overrides:
+  get: 5.0.0-release-candidate-5
 
 dev_dependencies:
   flutter_test:
