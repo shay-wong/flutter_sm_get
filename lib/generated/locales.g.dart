@@ -20,7 +20,7 @@ class Locales {
   static const zh = {
     'reload': '重新加载',
     'no_data': '暂无数据',
-    'no_network': '当前暂无网络, 请稍后再试',
+    'state_error_tips': '啊哦, 出错了',
   };
   static const en = {
     'reload': 'Reload',
