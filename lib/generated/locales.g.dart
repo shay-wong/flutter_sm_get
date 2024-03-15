@@ -2,7 +2,7 @@
 
 // ignore_for_file: lines_longer_than_80_chars, constant_identifier_names
 // ignore: avoid_classes_with_only_static_members
-class MAppTranslation {
+class SMGetAppTranslation {
   static Map<String, Map<String, String>> translations = {
     'zh': Locales.zh,
     'en': Locales.en,
