@@ -1,4 +1,4 @@
-### v0.0.2-preview-1
+### 0.0.2-rc.1
 
 - 适配了 getx 5.0.0-release-candidate-5
 
