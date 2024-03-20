@@ -1,7 +1,17 @@
-name: flutter_sm_get
-description: "A new Flutter package project."
-version: 0.0.1
-publish_to: none
+name: flutter_sm_get_plus
+description: "This is an enhanced implementation of GetX."
+version: 0.0.2-preview-1
+homepage: "https://github.com/shay-wong/flutter_sm_get_plus"
+repository: "https://github.com/shay-wong/flutter_sm_get_plus"
+issue_tracker: "https://github.com/shay-wong/flutter_sm_get_plus/issues"
+
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
 
 environment:
   sdk: ">=3.3.1 <4.0.0"
@@ -10,12 +20,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get: 5.0.0-release-candidate-5
+  get: ^5.0.0-release-candidate-5
   loading_animation_widget: ^1.2.1
-  flutter_sm_models:
-    git:
-      url: https://github.com/shay-wong/flutter_sm_models.git
-      ref: main
+  flutter_sm_models: ^0.0.2
 
 dependency_overrides:
   get: 5.0.0-release-candidate-5
@@ -24,5 +31,3 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.1
-
-flutter: null
