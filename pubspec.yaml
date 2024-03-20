@@ -1,6 +1,6 @@
 name: flutter_sm_get_plus
 description: "This is an enhanced implementation of GetX."
-version: 0.0.2-preview-1
+version: 0.0.2-rc.1
 homepage: "https://github.com/shay-wong/flutter_sm_get_plus"
 repository: "https://github.com/shay-wong/flutter_sm_get_plus"
 issue_tracker: "https://github.com/shay-wong/flutter_sm_get_plus/issues"
