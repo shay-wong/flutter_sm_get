@@ -1,3 +1,3 @@
-# flutter_sm_get
+# sm_get_plus
 
-This is an enhanced implementation of GetX.
+An enhanced implementation of GetX with more features and convenience.
