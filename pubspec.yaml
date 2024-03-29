@@ -1,4 +1,4 @@
-name: flutter_sm_get_plus
+name: sm_get_plus
 description: "This is an enhanced implementation of GetX."
 version: 0.0.1
 homepage: "https://github.com/shay-wong/flutter_sm_get_plus"
@@ -27,4 +27,4 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
+  flutter_lints: ^3.0.2

@@ -11,20 +11,20 @@ class SMGetAppTranslation {
 
 class LocaleKeys {
   LocaleKeys._();
-  static const reload = 'reload';
-  static const no_data = 'no_data';
-  static const state_error_tips = 'state_error_tips';
+  static const reload = 'Reload';
+  static const no_data = 'No Data';
+  static const state_error_tips = 'A error occurred';
 }
 
 class Locales {
   static const zh = {
-    'reload': '重新加载',
-    'no_data': '暂无数据',
-    'state_error_tips': '啊哦, 出错了',
+    'Reload': '重新加载',
+    'No Data': '暂无数据',
+    'A error occurred': '啊哦, 出错了',
   };
   static const en = {
-    'reload': 'Reload',
-    'no_data': 'No data',
-    'state_error_tips': 'A error occurred',
+    'Reload': 'Reload',
+    'No data': 'No data',
+    'A error occurred': 'A error occurred',
   };
 }
