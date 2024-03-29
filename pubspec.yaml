@@ -1,17 +1,9 @@
 name: sm_get_plus
-description: "This is an enhanced implementation of GetX."
+description: "An enhanced implementation of GetX with more features and convenience."
 version: 0.0.1
 homepage: "https://github.com/shay-wong/flutter_sm_get_plus"
 repository: "https://github.com/shay-wong/flutter_sm_get_plus"
 issue_tracker: "https://github.com/shay-wong/flutter_sm_get_plus/issues"
-
-platforms:
-  android:
-  ios:
-  linux:
-  macos:
-  web:
-  windows:
 
 environment:
   sdk: ">=3.3.1 <4.0.0"
@@ -22,9 +14,17 @@ dependencies:
     sdk: flutter
   get: ^4.6.6
   loading_animation_widget: ^1.2.1
-  flutter_sm_models: ^0.0.2
+  sm_models: ^0.0.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.2
+
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:

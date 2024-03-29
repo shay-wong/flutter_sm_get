@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_sm_models/sm_models.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/list_notifier.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:sm_models/sm_models.dart';
 
 import '../generated/locales.g.dart';
 import '../utils/equality/m_equality.dart';
