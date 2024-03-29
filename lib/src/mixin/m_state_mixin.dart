@@ -47,13 +47,17 @@ extension MStateExt<T> on MStateMixin<T> {
       } else if (status.isError) {
         return onError != null
             ? onError(status.error) ?? const SizedBox.shrink()
-            : Center(child: Text('${LocaleKeys.state_error_tips}: ${status.errorMsg}'));
+            : Center(
+                child:
+                    Text('${LocaleKeys.state_error_tips}: ${status.errorMsg}'));
       } else if (status.isEmpty) {
-        return onEmpty ?? const SizedBox.shrink(); // Also can be widget(null); but is risky
+        return onEmpty ??
+            const SizedBox.shrink(); // Also can be widget(null); but is risky
       } else if (status.isSuccess) {
         return widget(value);
       } else if (status.isCustom) {
-        return onCustom?.call(_) ?? const SizedBox.shrink(); // Also can be widget(null); but is risky
+        return onCustom?.call(_) ??
+            const SizedBox.shrink(); // Also can be widget(null); but is risky
       }
       return widget(value);
     });
@@ -124,7 +128,8 @@ abstract class MGetStatus<T> with Equality {
 
   factory MGetStatus.empty() => MEmptyStatus<T>();
 
-  factory MGetStatus.error(dynamic message) => MErrorStatus<T, dynamic>(message);
+  factory MGetStatus.error(dynamic message) =>
+      MErrorStatus<T, dynamic>(message);
 
   factory MGetStatus.loading() => MLoadingStatus<T>();
 
@@ -225,7 +230,8 @@ mixin MStateMixin<T> on ListNotifierMixin {
     _initialData = initialData;
     _error = errorMessage != null ? MError(message: errorMessage) : error;
     _useEmpty = useEmpty;
-    _onLoading(body, initialData: initialData, error: _error, useEmpty: useEmpty);
+    _onLoading(body,
+        initialData: initialData, error: _error, useEmpty: useEmpty);
   }
 
   void onReload() {
@@ -266,7 +272,8 @@ mixin MStateMixin<T> on ListNotifierMixin {
               size: 100,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 8),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 25.0, vertical: 8),
               child: Text(
                 emptyText ?? LocaleKeys.no_data.tr,
                 style: const TextStyle(
@@ -352,7 +359,9 @@ mixin MStateMixin<T> on ListNotifierMixin {
     status = MGetStatus<T>.loading();
     final compute = body;
     compute().then((newValue) {
-      if ((newValue == null || newValue._isEmpty()) && (initialData == null || initialData._isEmpty()) && useEmpty) {
+      if ((newValue == null || newValue._isEmpty()) &&
+          (initialData == null || initialData._isEmpty()) &&
+          useEmpty) {
         status = MGetStatus<T>.empty();
       } else {
         status = MGetStatus<T>.success(newValue ?? initialData!);
